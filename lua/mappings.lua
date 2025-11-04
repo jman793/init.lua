@@ -94,25 +94,6 @@ vim.keymap.set(
 -- UndoTree Mappings
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
--- Harpoon Mappings
-local mark = require("harpoon.mark")
-local ui = require("harpoon.ui")
-vim.keymap.set("n", "<leader>a", mark.add_file)
-vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
-
-vim.keymap.set("n", "<C-h>", function()
-	ui.nav_file(1)
-end)
-vim.keymap.set("n", "<C-t>", function()
-	ui.nav_file(2)
-end)
-vim.keymap.set("n", "<C-n>", function()
-	ui.nav_file(3)
-end)
-vim.keymap.set("n", "<C-s>", function()
-	ui.nav_file(4)
-end)
-
 -- Floating Terminal Mappings
 vim.keymap.set("n", "<leader>tt", "<cmd>FloatingTerminal<cr>i", { desc = "Toggle Floating Terminal" })
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-N>", { desc = "terminal escape terminal mode" })

@@ -45,10 +45,6 @@ return {
 		end,
 	},
 	{
-		"theprimeagen/harpoon",
-		lazy = false,
-	},
-	{
 		"mbbill/undotree",
 		lazy = false,
 	},
