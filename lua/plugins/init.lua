@@ -2,6 +2,7 @@ return {
 	{ import = "plugins.custom.rust_config" },
 	{ import = "plugins.custom.neotest" },
 	{ import = "plugins.custom.dap" },
+	{ import = "plugins.custom.lspsetup" },
 	{
 		"supermaven-inc/supermaven-nvim",
 		config = function()
@@ -72,34 +73,6 @@ return {
 			require("telescope").load_extension("lazygit")
 		end,
 	},
-	{
-		"neovim/nvim-lspconfig",
-		config = function()
-			require("nvchad.configs.lspconfig").defaults()
-			require("configs.lspconfig")
-		end,
-	},
-
-	{
-		"williamboman/mason.nvim",
-		opts = {
-			ensure_installed = {
-				"lua-language-server",
-				"stylua",
-				"rust-analyzer",
-				"prettier",
-				"pyright",
-				"typescript-language-server",
-				"jsonls",
-				"gopls",
-				"goimports",
-				"gofumpt",
-				"clangd",
-				"clang-format",
-			},
-		},
-	},
-
 	{
 		"nvim-treesitter/nvim-treesitter",
 		opts = {
