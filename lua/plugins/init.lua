@@ -3,6 +3,7 @@ return {
 	{ import = "plugins.custom.neotest" },
 	{ import = "plugins.custom.dap" },
 	{ import = "plugins.custom.lspsetup" },
+	{ import = "plugins.custom.nvimcmp" },
 	{
 		"supermaven-inc/supermaven-nvim",
 		config = function()
@@ -37,13 +38,6 @@ return {
 	{
 		"folke/todo-comments.nvim",
 		lazy = false,
-	},
-	{
-		"stevearc/conform.nvim",
-		event = "BufWritePre", -- uncomment for format on save
-		config = function()
-			require("configs.conformxit")
-		end,
 	},
 	{
 		"mbbill/undotree",
