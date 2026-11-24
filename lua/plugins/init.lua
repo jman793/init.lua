@@ -5,11 +5,13 @@ return {
 	{ import = "plugins.custom.lspsetup" },
 	{ import = "plugins.custom.nvimcmp" },
 	{
-		"supermaven-inc/supermaven-nvim",
-		config = function()
-			require("supermaven-nvim").setup({})
-		end,
-		lazy = false,
+		"rachartier/tiny-code-action.nvim",
+		dependencies = {
+			-- optional picker via telescope
+			{ "nvim-telescope/telescope.nvim" },
+		},
+		event = "LspAttach",
+		opts = {},
 	},
 	{
 		"stevearc/oil.nvim",

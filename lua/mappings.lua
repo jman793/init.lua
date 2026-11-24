@@ -45,6 +45,7 @@ vim.keymap.set("n", "grn", vim.lsp.buf.rename, { desc = "Rename" })
 vim.keymap.set("n", "grr", vim.lsp.buf.references, { desc = "Show References" })
 vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol, { desc = "View Symbol" })
 vim.keymap.set("i", "<C-s>", vim.lsp.buf.signature_help)
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action" })
 
 -- Diagnostic Mappings
 local go_to_error = function()
@@ -200,3 +201,8 @@ todo_comments.setup()
 
 vim.keymap.set("n", "<leader>ft", "<CMD>TodoTelescope<CR>", { desc = "Find Todo Comments" })
 vim.keymap.set("n", "<leader>qt", "<CMD>TodoQuickFix<CR>", { desc = "Find Todo Comments" })
+
+-- Tiny
+vim.keymap.set({ "n", "x" }, "<leader>ca", function()
+	require("tiny-code-action").code_action()
+end, { noremap = true, silent = true })
