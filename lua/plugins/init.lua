@@ -12,13 +12,6 @@ return {
 		lazy = false,
 	},
 	{
-		"jose-elias-alvarez/null-ls.nvim",
-		event = "VeryLazy",
-		opts = function()
-			return require("plugins.custom.null-ls")
-		end,
-	},
-	{
 		"stevearc/oil.nvim",
 		opts = {
 			columns = {
